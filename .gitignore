@@ -1,0 +1,6 @@
+.gemini/
+.agent/
+.agents/
+tmp/
+*.log
+node_modules/
