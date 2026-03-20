@@ -316,6 +316,23 @@
 
         .rec-content { flex: 1; color: var(--text); font-size: 1rem; }
         .rec-content b { color: #fff; font-weight: 600; }
+        .rec-category {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.3rem;
+            color: var(--muted);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .rec-category i { 
+            width: 8px; 
+            height: 8px; 
+            border-radius: 50%; 
+            display: inline-block;
+        }
 
         .tool-row {
             display: flex;
@@ -435,43 +452,63 @@
             <div class="rec-list">
                 <div class="rec-card critical">
                     <div class="rec-badge badge-critical">Critical</div>
-                    <div class="rec-content"><b>Formalize Security Policy</b>: Create a formal Data Privacy & Security policy for Devin usage (Addresses Q12).</div>
+                    <div class="rec-content">
+                        <div class="rec-category"><i style="background: var(--risk);"></i> Risks (Q12)</div>
+                        <b>Formalize Security Policy</b>: Create a formal Data Privacy & Security policy for Devin usage.</div>
                 </div>
                 <div class="rec-card high">
                     <div class="rec-badge badge-high">High</div>
-                    <div class="rec-content"><b>Stabilize QA Automation</b>: Standardize the Devin-to-QA workflow to stabilize autotest generation (Addresses Q9).</div>
+                    <div class="rec-content">
+                        <div class="rec-category"><i style="background: var(--qa);"></i> Quality (Q9)</div>
+                        <b>Stabilize QA Automation</b>: Standardize the Devin-to-QA workflow to stabilize autotest generation.</div>
                 </div>
                 <div class="rec-card high">
                     <div class="rec-badge badge-high">High</div>
-                    <div class="rec-content"><b>Standardize Prioritization</b>: Implement an AI-assisted prioritization framework in Linear (Addresses Q3).</div>
+                    <div class="rec-content">
+                        <div class="rec-category"><i style="background: var(--pm);"></i> Product (Q3)</div>
+                        <b>Standardize Prioritization</b>: Implement an AI-assisted prioritization framework in Linear.</div>
                 </div>
                 <div class="rec-card med">
                     <div class="rec-badge badge-med">Medium</div>
-                    <div class="rec-content"><b>Expand Knowledge Base</b>: Include specific security-check patterns for PRs in Devin's knowledge (Addresses Q6).</div>
+                    <div class="rec-content">
+                        <div class="rec-category"><i style="background: var(--team);"></i> Team / Tracking (Q6)</div>
+                        <b>Expand Knowledge Base</b>: Include specific security-check patterns for PRs in Devin's knowledge.</div>
                 </div>
                 <div class="rec-card med">
                     <div class="rec-badge badge-med">Medium</div>
-                    <div class="rec-content"><b>Synthetic Data Pilot</b>: Begin experimenting with AI for synthetic test data generation (Addresses Q11).</div>
+                    <div class="rec-content">
+                        <div class="rec-category"><i style="background: var(--qa);"></i> Quality (Q11)</div>
+                        <b>Synthetic Data Pilot</b>: Begin experimenting with AI for synthetic test data generation.</div>
                 </div>
                 <div class="rec-card med">
                     <div class="rec-badge badge-med">Medium</div>
-                    <div class="rec-content"><b>Hallucination Audit</b>: Conduct a audit on recent migrations to refine validation checklists.</div>
+                    <div class="rec-content">
+                        <div class="rec-category"><i style="background: var(--eng);"></i> Engineering</div>
+                        <b>Hallucination Audit</b>: Conduct a audit on recent migrations to refine validation checklists.</div>
                 </div>
                 <div class="rec-card low">
                     <div class="rec-badge badge-low">Low</div>
-                    <div class="rec-content"><b>User Discovery Guides</b>: Use Devin to generate User Interview guides for upcoming sessions (Addresses Q2).</div>
+                    <div class="rec-content">
+                        <div class="rec-category"><i style="background: var(--pm);"></i> Product (Q2)</div>
+                        <b>User Discovery Guides</b>: Use Devin to generate User Interview guides for upcoming sessions.</div>
                 </div>
                 <div class="rec-card low">
                     <div class="rec-badge badge-low">Low</div>
-                    <div class="rec-content"><b>Quality Metrics</b>: Refine tracking to include Quality (defect leakage) alongside Velocity.</div>
+                    <div class="rec-content">
+                        <div class="rec-category"><i style="background: var(--team);"></i> Team / Tracking</div>
+                        <b>Quality Metrics</b>: Refine tracking to include Quality (defect leakage) alongside Velocity.</div>
                 </div>
                 <div class="rec-card low">
                     <div class="rec-badge badge-low">Low</div>
-                    <div class="rec-content"><b>Parallel Documentation</b>: Explore "Parallel Mode" to ensure zero lag between code and docs.</div>
+                    <div class="rec-content">
+                        <div class="rec-category"><i style="background: var(--eng);"></i> Engineering</div>
+                        <b>Parallel Documentation</b>: Explore "Parallel Mode" to ensure zero lag between code and docs.</div>
                 </div>
                 <div class="rec-card opportunity">
                     <div class="rec-badge badge-opportunity">Opportunity</div>
-                    <div class="rec-content"><b>Blueprint Sharing</b>: Share "Devin Knowledge" patterns with other Forte teams as a best practice.</div>
+                    <div class="rec-content">
+                        <div class="rec-category"><i style="background: var(--team);"></i> Team / Tracking</div>
+                        <b>Blueprint Sharing</b>: Share "Devin Knowledge" patterns with other Forte teams.</div>
                 </div>
             </div>
         </div>

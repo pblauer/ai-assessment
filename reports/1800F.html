@@ -319,6 +319,23 @@
 
         .rec-content { flex: 1; color: var(--text); font-size: 1rem; }
         .rec-content b { color: #fff; font-weight: 600; }
+        .rec-category {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.3rem;
+            color: var(--muted);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .rec-category i { 
+            width: 8px; 
+            height: 8px; 
+            border-radius: 50%; 
+            display: inline-block;
+        }
 
         .tool-row {
             display: flex;
@@ -446,15 +463,21 @@
             <div class="rec-list">
                 <div class="rec-card critical">
                     <div class="rec-badge badge-critical">Critical</div>
-                    <div class="rec-content"><b>Secure Enterprise Governance</b>: Move from personal Pro accounts to enterprise licenses to eliminate security risks (Q12).</div>
+                    <div class="rec-content">
+                        <div class="rec-category"><i style="background: var(--risk);"></i> Risks (Q12)</div>
+                        <b>Secure Enterprise Governance</b>: Move from personal Pro accounts to enterprise licenses to eliminate security risks.</div>
                 </div>
                 <div class="rec-card high">
                     <div class="rec-badge badge-high">High Priority</div>
-                    <div class="rec-content"><b>Standardize Prompt Library</b>: Convert architectural MD files into shared team patterns (Q14).</div>
+                    <div class="rec-content">
+                        <div class="rec-category"><i style="background: var(--team);"></i> Team / Tracking (Q14)</div>
+                        <b>Standardize Prompt Library</b>: Convert architectural MD files into shared team patterns.</div>
                 </div>
                 <div class="rec-card med">
                     <div class="rec-badge badge-med">Medium</div>
-                    <div class="rec-content"><b>Onboard Laggards</b>: Pair hesitant team members with AI Champions to overcome adoption friction (Q4).</div>
+                    <div class="rec-content">
+                        <div class="rec-category"><i style="background: var(--pm);"></i> Product (Q4)</div>
+                        <b>Onboard Laggards</b>: Pair hesitant team members with AI Champions to overcome adoption friction.</div>
                 </div>
             </div>
         </div>
