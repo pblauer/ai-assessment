@@ -459,21 +459,31 @@
         </div>
 
         <div class="card">
-            <div class="section-title">Prioritized Recommendations</div>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.5rem;">
+                <div class="section-title" style="margin-bottom: 0;">Prioritized Recommendations</div>
+                <div class="rec-tabs">
+                    <button class="rec-tab active" onclick="filterRecs('all')">All</button>
+                    <button class="rec-tab" onclick="filterRecs('product')">Product</button>
+                    <button class="rec-tab" onclick="filterRecs('engineering')">Engineering</button>
+                    <button class="rec-tab" onclick="filterRecs('qa')">Quality</button>
+                    <button class="rec-tab" onclick="filterRecs('risk')">Risks</button>
+                    <button class="rec-tab" onclick="filterRecs('team')">Team</button>
+                </div>
+            </div>
             <div class="rec-list">
-                <div class="rec-card critical">
+                <div class="rec-card critical" data-category="risk">
                     <div class="rec-badge badge-critical">Critical</div>
                     <div class="rec-content">
                         <div class="rec-category"><i style="background: var(--risk);"></i> Risks (Q12)</div>
                         <b>Secure Enterprise Governance</b>: Move from personal Pro accounts to enterprise licenses to eliminate security risks.</div>
                 </div>
-                <div class="rec-card high">
-                    <div class="rec-badge badge-high">High Priority</div>
+                <div class="rec-card high" data-category="team">
+                    <div class="rec-badge badge-high" style="min-width: 120px;">High Priority</div>
                     <div class="rec-content">
                         <div class="rec-category"><i style="background: var(--team);"></i> Team / Tracking (Q14)</div>
                         <b>Standardize Prompt Library</b>: Convert architectural MD files into shared team patterns.</div>
                 </div>
-                <div class="rec-card med">
+                <div class="rec-card med" data-category="product">
                     <div class="rec-badge badge-med">Medium</div>
                     <div class="rec-content">
                         <div class="rec-category"><i style="background: var(--pm);"></i> Product (Q4)</div>
@@ -527,6 +537,26 @@
         </div>
     </main>
 
+    <script>
+        function filterRecs(category) {
+            // Update tabs
+            document.querySelectorAll('.rec-tab').forEach(tab => {
+                tab.classList.remove('active');
+                if (tab.innerText.toLowerCase() === category || (category === 'all' && tab.innerText === 'All')) {
+                    tab.classList.add('active');
+                }
+            });
+
+            // Filter cards
+            document.querySelectorAll('.rec-card').forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
